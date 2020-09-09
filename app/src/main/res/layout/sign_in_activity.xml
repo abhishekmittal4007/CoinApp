@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <com.digi.pay.custom.textviews.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Sign Up"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/_24sdp"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_50sdp">
+
+        <com.digi.pay.custom.edittexts.MediumEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/edit_text_bkgd"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="@dimen/_15sdp"
+            android:elevation="@dimen/_3sdp"
+            android:hint="Phone number"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:paddingStart="@dimen/_5sdp"
+            android:textColorHint="@color/black"
+            tools:ignore="HardcodedText,LabelFor,RtlSymmetry,TextFields" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_phone_number"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <com.digi.pay.custom.edittexts.MediumEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@drawable/edit_text_bkgd"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawablePadding="@dimen/_15sdp"
+                android:elevation="@dimen/_3sdp"
+                android:hint="Password"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:maxLength="15"
+                android:paddingStart="@dimen/_5sdp"
+                android:textColorHint="@color/black"
+                tools:ignore="HardcodedText,LabelFor,RtlSymmetry,TextFields" />
+
+            <com.digi.pay.custom.buttons.ExtraBoldTextButton
+                android:id="@+id/txt_forgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:textAllCaps="false"
+                android:text="Forgot"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <com.digi.pay.custom.buttons.BoldTextButton
+            android:id="@+id/btn_singin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/rl_pass"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/button_bkgd"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="HardcodedText" />
+
+        <com.digi.pay.custom.textviews.ExtraBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_singin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="Create an account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+</RelativeLayout>

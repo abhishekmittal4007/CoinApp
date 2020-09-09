@@ -8,21 +8,20 @@ import android.util.AttributeSet;
 public class BoldTextView extends androidx.appcompat.widget.AppCompatTextView {
     public BoldTextView(Context context) {
         super(context);
-        Typeface  face = Typeface.createFromAsset(context.getAssets(), "font/montserrat_bold.ttf");
-//        Typeface  face = ResourcesCompat.getFont(context, );
-        this.setTypeface(face);
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/montserrat_bold.ttf");
+        this.setTypeface(typeface);
     }
 
     public BoldTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Typeface face = Typeface.createFromAsset(context.getAssets(), "fonts/montserrat_bold.ttf");
-        this.setTypeface(face);
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/montserrat_bold.ttf");
+        this.setTypeface(typeface);
     }
 
     public BoldTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        Typeface face = Typeface.createFromAsset(context.getAssets(), "fonts/montserrat_bold.ttf");
-        this.setTypeface(face);
+        Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/montserrat_bold.ttf");
+        this.setTypeface(typeface);
     }
 
     protected void onDraw(Canvas canvas) {

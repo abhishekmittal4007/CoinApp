@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">DigiPay</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hello">Hello,</string>
+    <string name="dharmendra">Dharmendra</string>
+    <string name="payment">Payment</string>
+    <string name="cn_10_000">Cn 10,000</string>
+    <string name="send">Send</string>
+    <string name="receive">Receive</string>
+    <string name="transactions">Transactions</string>
+    <string name="debit">Debit</string>
+    <string name="credit">Credit</string>
+    <string name="send_coins">Send Coins</string>
+    <string name="enter_account_number">Enter account number</string>
+    <string name="conti">Continue</string>
+    <string name="or">OR</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="recent_contacts">Recent Contacts</string>
 </resources>
