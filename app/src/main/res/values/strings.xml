@@ -25,4 +25,6 @@
     <string name="enter_coins">Enter Coins</string>
     <string name="scan_my_code_to_pay">Scan my code to pay</string>
     <string name="open_code_scanner">Open Code Scanner</string>
+    <string name="payment_successful">Payment Successful</string>
+    <string name="hello_there">Hello There</string>
 </resources>

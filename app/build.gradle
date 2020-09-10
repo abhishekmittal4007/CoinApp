@@ -23,6 +23,9 @@ android {
         vectorDrawables.useSupportLibrary = true
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        renderscriptTargetApi 25
+        renderscriptSupportModeEnabled true
     }
 
     buildTypes {
@@ -76,6 +79,10 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation 'com.airbnb.android:lottie:3.4.2'
+
+    implementation 'com.kyleduo.blurpopupwindow:blurpopupwindow:1.0.9'
+
+
 }
 repositories {
     mavenCentral()

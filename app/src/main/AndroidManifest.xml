@@ -34,7 +34,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:allowBackup">
+        tools:replace="android:allowBackup,label"
+        >
         <activity
             android:name=".ui.SplashActivity_"
             android:configChanges="orientation|screenSize"

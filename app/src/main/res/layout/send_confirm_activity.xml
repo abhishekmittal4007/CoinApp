@@ -110,6 +110,20 @@
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold" />
 
+        <com.digi.pay.custom.textviews.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:text="@string/cn_10_000"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_24sdp"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/total_amount"
+            android:visibility="gone"/>
+
         <com.digi.pay.custom.edittexts.MediumEditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
@@ -123,7 +137,7 @@
             android:elevation="@dimen/_3sdp"
             android:hint="Password"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:maxLength="15"
             android:paddingStart="@dimen/_5sdp"
             android:textColorHint="@color/black"
@@ -143,5 +157,21 @@
             android:textColor="@color/white"
             android:textSize="@dimen/_20sdp"
             tools:ignore="HardcodedText" />
+
+        <com.digi.pay.custom.buttons.BoldTextButton
+            android:id="@+id/confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/button_bkgd"
+            android:text="@string/confirm_and_send"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="HardcodedText"
+            android:visibility="gone"/>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.airbnb.lottie.LottieAnimationView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/success_animation" />
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/success_animation"
+            tools:ignore="MissingConstraints"
+            />
+
+
+        <com.digi.pay.custom.textviews.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/payment_successful"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_24sdp"
+            tools:ignore="MissingConstraints"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:id="@+id/payment_status"
+            />
+
+    </RelativeLayout>
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
