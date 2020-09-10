@@ -11,7 +11,7 @@ import com.digi.pay.Models.TransactionData;
 import com.digi.pay.R;
 import com.digi.pay.adapters.HomeViewModel;
 import com.digi.pay.adapters.TransactionAdapter;
-import com.digi.pay.ui.SendActivity;
+import com.digi.pay.ui.ReceiveActivity_;
 import com.digi.pay.ui.SendActivity_;
 
 import org.androidannotations.annotations.AfterViews;
@@ -32,16 +32,8 @@ public class HomeFragment extends Fragment {
     ArrayList<TransactionData> myListData;
     @ViewById(R.id.send_btn)
     RelativeLayout send_btn;
-    @ViewById(R.id.receive_btn)
+    @ViewById(R.id.recieve_btn)
     RelativeLayout receive_btn;
-
-//    public View onCreateView(@NonNull LayoutInflater inflater,
-//                             ViewGroup container, Bundle savedInstanceState) {
-//        homeViewModel = ViewModelProviders.of(this).get(HomeViewModel.class);
-//        View root = inflater.inflate(R.layout.fragment_home, container, false);
-//        init();
-//        return root;
-//    }
 
     @AfterViews
     public void init() {
@@ -65,8 +57,14 @@ public class HomeFragment extends Fragment {
     }
 
     @Click(R.id.send_btn)
-    public void sedButtonClicked() {
+    public void sendButtonClicked() {
         Intent i = new Intent(getActivity(), SendActivity_.class);
+        startActivity(i);
+    }
+
+    @Click(R.id.recieve_btn)
+    public void recieveButtonClicked() {
+        Intent i = new Intent(getActivity(), ReceiveActivity_.class);
         startActivity(i);
     }
 }

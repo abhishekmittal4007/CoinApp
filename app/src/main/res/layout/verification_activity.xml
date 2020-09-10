@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp">
+
+        <com.digi.pay.custom.textviews.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Verification"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_24sdp"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:srcCompat="@drawable/ic_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_50sdp">
+
+        <com.digi.pay.custom.textviews.BoldTextView
+            android:id="@+id/txt_vc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Verification Code"
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_15sdp"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+        <LinearLayout
+            android:id="@+id/ll_codes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_vc"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal"
+            android:weightSum="6">
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bkgd"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_35sdp" />
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bkgd"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_35sdp" />
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bkgd"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_35sdp" />
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bkgd"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_35sdp" />
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bkgd"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_35sdp" />
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_bkgd"
+                android:elevation="@dimen/_3sdp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_35sdp" />
+        </LinearLayout>
+
+        <com.digi.pay.custom.buttons.BoldTextButton
+            android:id="@+id/btn_singin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@+id/ll_codes"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/button_bkgd"
+            android:text="Verify"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+</RelativeLayout>

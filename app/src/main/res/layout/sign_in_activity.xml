@@ -62,13 +62,13 @@
             <com.digi.pay.custom.buttons.ExtraBoldTextButton
                 android:id="@+id/txt_forgot"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_below="@id/et_password"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@android:color/transparent"
-                android:textAllCaps="false"
                 android:text="Forgot"
+                android:textAllCaps="false"
                 android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/_15sdp"
                 tools:ignore="HardcodedText" />
@@ -77,9 +77,9 @@
         <com.digi.pay.custom.buttons.BoldTextButton
             android:id="@+id/btn_singin"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_height="@dimen/_45sdp"
             android:layout_below="@+id/rl_pass"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:background="@drawable/button_bkgd"
             android:text="Sign In"
             android:textAllCaps="false"

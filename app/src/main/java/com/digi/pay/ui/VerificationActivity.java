@@ -1,7 +1,6 @@
 package com.digi.pay.ui;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,17 +13,11 @@ import org.androidannotations.annotations.WindowFeature;
 
 @WindowFeature(Window.FEATURE_NO_TITLE)
 @SuppressLint("Registered")
-@EActivity(R.layout.forgot_password_activity)
-public class ForgotPasswordActivity extends AppCompatActivity {
+@EActivity(R.layout.verification_activity)
+public class VerificationActivity extends AppCompatActivity {
 
     @Click(R.id.btn_back)
     public void setBack() {
         finish();
-    }
-
-    @Click(R.id.btn_singin)
-    public void setSignIn() {
-        Intent intent = new Intent(this, NewPasswordActivity_.class);
-        startActivity(intent);
     }
 }

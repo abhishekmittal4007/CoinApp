@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -11,109 +13,99 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toolbar"
-            android:padding="10dp"
-            >
+            android:layout_marginTop="@dimen/_8sdp">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:id="@+id/back_btn"
-                android:src="@drawable/ic_baseline_arrow_back_24"
-                android:layout_centerVertical="true"/>
-
-            <TextView
+            <com.digi.pay.custom.textviews.BoldTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/send_coins"
-                android:textSize="20sp"
-                android:textColor="#000"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"/>
+                android:text="@string/send_coins"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_24sdp"
+                tools:ignore="MissingConstraints" />
 
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_back" />
         </RelativeLayout>
 
-
-        <EditText
+        <com.digi.pay.custom.edittexts.MediumEditText
+            android:id="@+id/enter_account_number"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_view_gray"
-            android:hint="@string/enter_account_number"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:textColor="#000"
-            android:textSize="18sp"
-            android:drawableLeft="@drawable/ic_baseline_account_balance_24"
-            android:drawablePadding="15dp"
-            android:inputType="number"
-            android:id="@+id/enter_account_number"/>
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/conti"
-            android:background="@drawable/rounded_button_themeblue"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:textAlignment="center"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
-            android:padding="12dp"
+            android:layout_height="@dimen/_50sdp"
             android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:id="@+id/continue_btn"/>
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/edit_text_bkgd"
+            android:drawableStart="@drawable/ic_address"
+            android:drawablePadding="@dimen/_15sdp"
+            android:elevation="@dimen/_3sdp"
+            android:hint="@string/enter_account_number"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:maxLength="15"
+            android:paddingStart="@dimen/_5sdp"
+            android:textColorHint="@color/black"
+            tools:ignore="HardcodedText,LabelFor,RtlSymmetry,TextFields" />
 
-        <TextView
+        <com.digi.pay.custom.buttons.BoldTextButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/button_bkgd"
+            android:text="@string/conti"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="HardcodedText" />
+
+        <com.digi.pay.custom.textviews.BoldTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center_horizontal"
             android:text="@string/or"
             android:textAlignment="center"
-            android:textSize="16sp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:layout_margin="10dp"/>
+            android:textSize="@dimen/_14sdp" />
 
-        <TextView
+
+        <com.digi.pay.custom.buttons.BoldTextButton
+            android:id="@+id/scan_qr_btn"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:background="@drawable/button_bkgd"
             android:text="@string/scan_qr"
-            android:background="@drawable/rounded_button_themeblue"
-            android:textSize="20sp"
-            android:textColor="#fff"
-            android:textAlignment="center"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="8dp"
-            android:padding="12dp"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:id="@+id/scan_qr_btn"/>
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="HardcodedText" />
 
-        <TextView
+        <com.digi.pay.custom.textviews.RegularTextView
+            android:id="@+id/recent_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_15sdp"
             android:text="@string/recent_contacts"
             android:textAlignment="center"
-            android:textSize="16sp"
-            android:layout_margin="20dp"
-            android:id="@+id/recent_header"/>
+            android:textSize="@dimen/_12sdp" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recent_sends"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/recent_sends"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            android:layout_marginBottom="2dp"/>
-
-
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_2sdp" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

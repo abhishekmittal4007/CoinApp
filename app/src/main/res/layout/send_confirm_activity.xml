@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <com.digi.pay.custom.textviews.BoldTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/send_coins"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_24sdp"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:srcCompat="@drawable/ic_back" />
+        </RelativeLayout>
+
+        <com.digi.pay.custom.textviews.SemiBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/to"
+            android:textAlignment="center"
+            android:textSize="@dimen/_12sdp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profilePhoto"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sampleteammate_image" />
+
+            <com.digi.pay.custom.textviews.SemiBoldTextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toEndOf="@+id/profilePhoto"
+                android:singleLine="true"
+                android:text="Keran Grant"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <com.digi.pay.custom.textviews.RegularTextView
+                android:id="@+id/phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/username"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/profilePhoto"
+                android:singleLine="true"
+                android:text="5789584525"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+
+        <com.digi.pay.custom.textviews.SemiBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/amount"
+            android:textAlignment="center"
+            android:textSize="@dimen/_12sdp" />
+
+        <com.digi.pay.custom.edittexts.BoldEditText
+            android:id="@+id/enter_coin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:background="@drawable/edit_text_bkgd"
+            android:hint="@string/enter_coins"
+            android:inputType="number"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/dark_blue"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+        <com.digi.pay.custom.edittexts.MediumEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_25sdp"
+            android:background="@drawable/edit_text_bkgd"
+            android:drawableStart="@drawable/ic_lock"
+            android:drawablePadding="@dimen/_15sdp"
+            android:elevation="@dimen/_3sdp"
+            android:hint="Password"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLength="15"
+            android:paddingStart="@dimen/_5sdp"
+            android:textColorHint="@color/black"
+            android:visibility="gone"
+            tools:ignore="HardcodedText,LabelFor,RtlSymmetry,TextFields" />
+
+        <com.digi.pay.custom.buttons.BoldTextButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:background="@drawable/button_bkgd"
+            android:text="@string/conti"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

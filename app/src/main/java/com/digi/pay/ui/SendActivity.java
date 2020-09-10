@@ -1,5 +1,6 @@
 package com.digi.pay.ui;
 
+import android.content.Intent;
 import android.view.Window;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,8 +12,8 @@ import com.digi.pay.R;
 import com.digi.pay.adapters.RecentSendAdapter;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
-import org.androidannotations.annotations.Fullscreen;
 import org.androidannotations.annotations.ViewById;
 import org.androidannotations.annotations.WindowFeature;
 
@@ -46,5 +47,16 @@ public class SendActivity extends AppCompatActivity {
         recent_sends.setHasFixedSize(true);
         recent_sends.setLayoutManager(new LinearLayoutManager(SendActivity.this));
         recent_sends.setAdapter(adapter);
+    }
+
+    @Click(R.id.continue_btn)
+    public void setBtnContinue() {
+        Intent i = new Intent(this, SendConfirmActivity_.class);
+        startActivity(i);
+    }
+
+    @Click(R.id.btn_back)
+    public void setBtnBack() {
+        finish();
     }
 }

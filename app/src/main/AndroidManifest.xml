@@ -57,6 +57,18 @@
         <activity
             android:name=".ui.SendActivity_"
             android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.ReceiveActivity_"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.SendConfirmActivity_"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.NewPasswordActivity_"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".ui.StatusActivity_"
+            android:configChanges="orientation|screenSize" />
     </application>
 
 </manifest>
