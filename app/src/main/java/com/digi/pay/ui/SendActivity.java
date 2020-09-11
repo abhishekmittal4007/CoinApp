@@ -3,16 +3,16 @@ package com.digi.pay.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.digi.pay.Models.RecentSendData;
 import com.digi.pay.R;
 import com.digi.pay.adapters.RecentSendAdapter;
-import com.digi.pay.custom.edittexts.MediumEditText;
+import com.digi.pay.view_models.RecentSendData;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -30,7 +30,7 @@ public class SendActivity extends AppCompatActivity {
     RecyclerView recent_sends;
 
     @ViewById(R.id.enter_account_number)
-    MediumEditText enter_account_number;
+    EditText enter_account_number;
 
     ArrayList<RecentSendData> myListData;
 
@@ -58,26 +58,20 @@ public class SendActivity extends AppCompatActivity {
     @Click(R.id.continue_btn)
     public void setBtnContinue() {
 
-        if (enter_account_number.length()>0)
-        {
+        if (enter_account_number.length() > 0) {
 
-            if (enter_account_number.length()>=10)
-            {
+            if (enter_account_number.length() >= 10) {
                 Bundle basket = new Bundle();
                 basket.putString("account_number", enter_account_number.getText().toString());
                 basket.putString("account_name", "Keran Grant");
                 Intent i = new Intent(this, SendConfirmActivity_.class);
                 i.putExtras(basket);
                 startActivity(i);
-            }
-            else
-            {
+            } else {
                 Toast.makeText(this, "Account Number must be 10 digit or up", Toast.LENGTH_SHORT).show();
             }
 
-        }
-        else
-        {
+        } else {
             Toast.makeText(this, "Please Enter Account Number", Toast.LENGTH_SHORT).show();
         }
 

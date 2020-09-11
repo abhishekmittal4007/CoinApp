@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.digi.pay.Models.RecentSendData;
 import com.digi.pay.R;
 import com.digi.pay.ui.SendConfirmActivity_;
+import com.digi.pay.view_models.RecentSendData;
 
 import java.util.ArrayList;
 
