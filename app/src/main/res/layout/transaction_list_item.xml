@@ -41,11 +41,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
                 android:layout_toStartOf="@+id/debit_value"
                 android:text="@string/credit"
                 android:textColor="@color/green"
-                android:textSize="@dimen/_10sdp" />
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="RelativeOverlap" />
 
             <com.digi.pay.custom.textviews.SemiBoldTextView
                 android:id="@+id/debit_value"
@@ -53,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_17sdp"
                 android:text="@string/debit"
                 android:textColor="@color/red"
                 android:textSize="@dimen/_10sdp" />

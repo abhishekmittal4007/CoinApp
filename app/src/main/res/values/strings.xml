@@ -27,4 +27,6 @@
     <string name="open_code_scanner">Open Code Scanner</string>
     <string name="payment_successful">Payment Successful</string>
     <string name="hello_there">Hello There</string>
+    <string name="label_hide">HIDE</string>
+    <string name="label_show">Show</string>
 </resources>

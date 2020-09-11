@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,8 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.digi.pay.R;
 import com.digi.pay.custom.buttons.BoldTextButton;
-import com.digi.pay.custom.edittexts.BoldEditText;
-import com.digi.pay.custom.edittexts.MediumEditText;
 import com.digi.pay.custom.textviews.BoldTextView;
 import com.digi.pay.custom.textviews.RegularTextView;
 import com.digi.pay.custom.textviews.SemiBoldTextView;
@@ -28,13 +27,13 @@ import org.androidannotations.annotations.WindowFeature;
 public class SendConfirmActivity extends AppCompatActivity {
 
     @ViewById(R.id.enter_coin)
-    BoldEditText enter_coin;
+    EditText enter_coin;
 
     @ViewById(R.id.continue_btn)
     TextView continue_btn;
 
     @ViewById(R.id.et_password)
-    MediumEditText et_password;
+    EditText et_password;
 
     @ViewById(R.id.username)
     SemiBoldTextView username;

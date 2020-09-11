@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.digi.pay.Models.TransactionData;
 import com.digi.pay.R;
+import com.digi.pay.view_models.TransactionData;
 
 import java.util.ArrayList;
 

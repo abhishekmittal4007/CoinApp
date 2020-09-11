@@ -1,4 +1,4 @@
-package com.digi.pay.Models;
+package com.digi.pay.view_models;
 
 public class RecentSendData {
 

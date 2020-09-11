@@ -7,12 +7,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.digi.pay.Models.TransactionData;
 import com.digi.pay.R;
-import com.digi.pay.adapters.HomeViewModel;
 import com.digi.pay.adapters.TransactionAdapter;
 import com.digi.pay.ui.ReceiveActivity_;
 import com.digi.pay.ui.SendActivity_;
+import com.digi.pay.view_models.TransactionData;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -24,16 +23,14 @@ import java.util.ArrayList;
 @EFragment(R.layout.fragment_home)
 public class HomeFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
-
     @ViewById(R.id.transaction_list)
     RecyclerView recyclerView;
-
-    ArrayList<TransactionData> myListData;
     @ViewById(R.id.send_btn)
     RelativeLayout send_btn;
     @ViewById(R.id.recieve_btn)
     RelativeLayout receive_btn;
+
+    ArrayList<TransactionData> myListData;
 
     @AfterViews
     public void init() {
