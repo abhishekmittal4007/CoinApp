@@ -23,6 +23,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-sdk tools:overrideLibrary="com.google.zxing.client.android" />
+
     <application
         android:allowBackup="false"
         android:hardwareAccelerated="true"
@@ -35,6 +37,7 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:allowBackup,label"
+
         >
         <activity
             android:name=".ui.SplashActivity_"
@@ -70,6 +73,11 @@
         <activity
             android:name=".ui.StatusActivity_"
             android:configChanges="orientation|screenSize" />
+
+        <!--<activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation" />-->
     </application>
 
 </manifest>

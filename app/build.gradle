@@ -82,6 +82,8 @@ dependencies {
 
     implementation 'com.kyleduo.blurpopupwindow:blurpopupwindow:1.0.9'
 
+    implementation('com.journeyapps:zxing-android-embedded:4.1.0') { transitive = false }
+    implementation 'com.google.zxing:core:3.4.0'
 
 }
 repositories {
