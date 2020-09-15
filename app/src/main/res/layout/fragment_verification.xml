@@ -66,7 +66,8 @@
                 android:maxLength="1"
                 android:text="3"
                 android:textColor="@color/dark_blue"
-                android:textSize="@dimen/_35sdp" />
+                android:textSize="@dimen/_35sdp"
+                android:id="@+id/codeletter1"/>
 
             <com.digi.pay.custom.textviews.BoldTextView
                 android:layout_width="0dp"
@@ -79,7 +80,8 @@
                 android:maxLength="1"
                 android:text="3"
                 android:textColor="@color/dark_blue"
-                android:textSize="@dimen/_35sdp" />
+                android:textSize="@dimen/_35sdp"
+                android:id="@+id/codeletter2"/>
 
             <com.digi.pay.custom.textviews.BoldTextView
                 android:layout_width="0dp"
@@ -92,7 +94,8 @@
                 android:maxLength="1"
                 android:text="3"
                 android:textColor="@color/dark_blue"
-                android:textSize="@dimen/_35sdp" />
+                android:textSize="@dimen/_35sdp"
+                android:id="@+id/codeletter3"/>
 
             <com.digi.pay.custom.textviews.BoldTextView
                 android:layout_width="0dp"
@@ -105,7 +108,8 @@
                 android:maxLength="1"
                 android:text="3"
                 android:textColor="@color/dark_blue"
-                android:textSize="@dimen/_35sdp" />
+                android:textSize="@dimen/_35sdp"
+                android:id="@+id/codeletter4"/>
 
             <com.digi.pay.custom.textviews.BoldTextView
                 android:layout_width="0dp"
@@ -118,7 +122,8 @@
                 android:maxLength="1"
                 android:text="3"
                 android:textColor="@color/dark_blue"
-                android:textSize="@dimen/_35sdp" />
+                android:textSize="@dimen/_35sdp"
+                android:id="@+id/codeletter5"/>
 
             <com.digi.pay.custom.textviews.BoldTextView
                 android:layout_width="0dp"
@@ -131,7 +136,8 @@
                 android:maxLength="1"
                 android:text="3"
                 android:textColor="@color/dark_blue"
-                android:textSize="@dimen/_35sdp" />
+                android:textSize="@dimen/_35sdp"
+                android:id="@+id/codeletter6"/>
         </LinearLayout>
 
         <com.digi.pay.custom.buttons.BoldTextButton
