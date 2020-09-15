@@ -42,10 +42,12 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_width="@dimen/_180sdp"
+                    android:id="@+id/user_qr"
+                    android:layout_width="@dimen/_200sdp"
                     android:layout_height="@dimen/_200sdp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/_50sdp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/ic_recieve_qr" />
 
                 <TextView
@@ -55,7 +57,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_marginRight="30dp"
-                    android:text="Account no. 76859 23452"
+                    android:text="Account no. 2938120947"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 

@@ -1,24 +1,21 @@
-package com.digi.pay.ui;
+package com.digi.pay.fragments;
 
 import android.annotation.SuppressLint;
 import android.text.method.PasswordTransformationMethod;
-import android.view.Window;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.digi.pay.R;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
-import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
-import org.androidannotations.annotations.WindowFeature;
 
-@WindowFeature(Window.FEATURE_NO_TITLE)
 @SuppressLint("Registered")
-@EActivity(R.layout.new_password_activity)
-public class NewPasswordActivity extends AppCompatActivity {
+@EFragment(R.layout.fragment_new_password)
+public class FragmentNewPassword extends Fragment {
 
     @ViewById(R.id.et_new_password)
     TextView et_new_password;
@@ -33,6 +30,6 @@ public class NewPasswordActivity extends AppCompatActivity {
 
     @Click(R.id.btn_back)
     public void setBack() {
-        finish();
+        requireActivity().getSupportFragmentManager().popBackStack();
     }
 }

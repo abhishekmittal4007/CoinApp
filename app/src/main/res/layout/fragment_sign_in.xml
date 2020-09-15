@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
     tools:context=".ui.MainActivity">
 
     <com.digi.pay.custom.textviews.BoldTextView
@@ -88,6 +90,7 @@
             tools:ignore="HardcodedText" />
 
         <com.digi.pay.custom.textviews.ExtraBoldTextView
+            android:id="@+id/txt_create_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/btn_singin"

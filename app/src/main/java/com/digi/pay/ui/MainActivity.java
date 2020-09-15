@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupWithNavController(this, navController, appBarConfiguration);
-
         NavigationUI.setupWithNavController(navView, navController);
     }
 
@@ -51,13 +50,14 @@ public class MainActivity extends AppCompatActivity {
             //if qrcode has nothing in it
             if (result.getContents() == null) {
                 Toast.makeText(MainActivity.this, "Result Not Found", Toast.LENGTH_LONG).show();
+                navView.setSelectedItemId(R.id.navigation_home);
             } else {
-                //if qr contains data
                 try {
+                    Toast.makeText(this, "" + result.getContents(), Toast.LENGTH_SHORT).show();
                     //converting the data to json
                     JSONObject obj = new JSONObject(result.getContents());
                     //setting values to textviews
-                    String name  = obj.getString("name");
+                    String name = obj.getString("name");
                     String account_number = obj.getString("account_number");
 
                     /* Send data to Send Coin Activity*/
@@ -79,6 +79,5 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-
     }
 }

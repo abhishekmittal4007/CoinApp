@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.digi.pay.R;
 import com.digi.pay.adapters.RecentSendAdapter;
 import com.digi.pay.view_models.RecentSendData;
+import com.google.zxing.integration.android.IntentIntegrator;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -57,9 +58,7 @@ public class SendActivity extends AppCompatActivity {
 
     @Click(R.id.continue_btn)
     public void setBtnContinue() {
-
         if (enter_account_number.length() > 0) {
-
             if (enter_account_number.length() >= 10) {
                 Bundle basket = new Bundle();
                 basket.putString("account_number", enter_account_number.getText().toString());
@@ -70,11 +69,18 @@ public class SendActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(this, "Account Number must be 10 digit or up", Toast.LENGTH_SHORT).show();
             }
-
         } else {
             Toast.makeText(this, "Please Enter Account Number", Toast.LENGTH_SHORT).show();
         }
+    }
 
+    @Click(R.id.scan_qr_btn)
+    public void setScanBtn() {
+        //intializing scan object
+        IntentIntegrator qrScan = new IntentIntegrator(this);
+        //initiating the qr code scan
+        qrScan.initiateScan();
+        qrScan.setOrientationLocked(true);
     }
 
     @Click(R.id.btn_back)

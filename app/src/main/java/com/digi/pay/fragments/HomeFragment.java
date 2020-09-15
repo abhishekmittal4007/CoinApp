@@ -1,7 +1,6 @@
 package com.digi.pay.fragments;
 
 import android.content.Intent;
-import android.widget.RelativeLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -20,15 +19,11 @@ import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 
-@EFragment(R.layout.fragment_home)
+@EFragment(R.layout.fragment_home_)
 public class HomeFragment extends Fragment {
 
     @ViewById(R.id.transaction_list)
     RecyclerView recyclerView;
-    @ViewById(R.id.send_btn)
-    RelativeLayout send_btn;
-    @ViewById(R.id.recieve_btn)
-    RelativeLayout receive_btn;
 
     ArrayList<TransactionData> myListData;
 

@@ -41,7 +41,7 @@ public class NotificationsFragment extends Fragment {
     public void init() {
         myListData = new ArrayList<>();
 
-        myListData.add(new TransactionData("Ajit Singh", "June 18, 2020 11:55 Am", " - ", " - 45 Cn "));
+        myListData.add(new TransactionData("Ajit Singh", "June 18, 2020 11:55 Am", "+140 Cn", "-"));
         myListData.add(new TransactionData("Ramveer", "June 19, 2020 12:35 Am", " + 29 Cn ", " - "));
         myListData.add(new TransactionData("Ankita", "June 21, 2020 02:10 Pm", " +300 Cn ", " - "));
         myListData.add(new TransactionData("Shaurya", "June 25, 2020 09:15 Pm", " - ", " -100 Cn "));
@@ -80,29 +80,26 @@ public class NotificationsFragment extends Fragment {
 
     }
 
-
-    private void sendNotification(){
+    private void sendNotification() {
         int notification_id = (int) System.currentTimeMillis();
         NotificationManager notificationManager = null;
         NotificationCompat.Builder mBuilder;
 
         String title = "DigiPay";
-        String body = "Coins Receive";
+        String body = "140 Coins Received from Ajit Singh!";
 
         //Set pending intent to builder
         Intent intent = new Intent(getActivity(), MainActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(getActivity(), 0, intent, PendingIntent.FLAG_ONE_SHOT);
 
         //Notification builder
-        if (notificationManager == null){
+        if (notificationManager == null) {
             notificationManager = (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
         }
-
-
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel mChannel = notificationManager.getNotificationChannel("CHANNEL_ID");
-            if (mChannel == null){
+            if (mChannel == null) {
                 mChannel = new NotificationChannel("CHANNEL_ID", "CHANNEL_NAME", importance);
                 mChannel.setDescription("CHANNEL_DESCRIPTION");
                 mChannel.enableVibration(true);
@@ -119,7 +116,7 @@ public class NotificationsFragment extends Fragment {
                     .setAutoCancel(true)
                     .setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400})
                     .setDefaults(Notification.DEFAULT_ALL);
-        }else {
+        } else {
             mBuilder = new NotificationCompat.Builder(getActivity());
             mBuilder.setContentTitle(title)
                     .setSmallIcon(R.drawable.ic_bell)
@@ -130,10 +127,6 @@ public class NotificationsFragment extends Fragment {
                     .setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400})
                     .setDefaults(Notification.DEFAULT_VIBRATE);
         }
-
         notificationManager.notify(1002, mBuilder.build());
     }
-
-
-
 }

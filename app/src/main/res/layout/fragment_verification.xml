@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
     tools:context=".ui.MainActivity">
 
     <RelativeLayout
@@ -133,7 +135,7 @@
         </LinearLayout>
 
         <com.digi.pay.custom.buttons.BoldTextButton
-            android:id="@+id/btn_singin"
+            android:id="@+id/btn_verify"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
             android:layout_below="@+id/ll_codes"

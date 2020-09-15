@@ -15,14 +15,11 @@ public class QRFragment extends Fragment {
 
     @AfterViews
     public void init(){
-
         //intializing scan object
         qrScan = new IntentIntegrator(getActivity());
-
         //initiating the qr code scan
         qrScan.initiateScan();
         qrScan.setOrientationLocked(true);
-
     }
 }
 

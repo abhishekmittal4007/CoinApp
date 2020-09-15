@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.digi.pay.fragments.QRFragment_"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_qr"
         tools:layout="@layout/fragment_qr" />
 
     <fragment
