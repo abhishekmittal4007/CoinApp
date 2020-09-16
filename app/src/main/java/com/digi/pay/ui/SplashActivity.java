@@ -31,6 +31,7 @@ public class SplashActivity extends AppCompatActivity {
         txt_dig.setAnimationListener(hTextView -> {
             Intent intent = new Intent(this, SignInActivity_.class);
             startActivity(intent);
+            finish();
         });
         txt_dig.animateText("DigiPay");
     }

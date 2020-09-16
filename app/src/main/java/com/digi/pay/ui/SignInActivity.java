@@ -22,4 +22,9 @@ public class SignInActivity extends AppCompatActivity {
         Utility.showFragment(this, new FragmentSignIn_()
                 , R.id.main_frame, null, FragmentSignIn.class.getSimpleName());
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }
