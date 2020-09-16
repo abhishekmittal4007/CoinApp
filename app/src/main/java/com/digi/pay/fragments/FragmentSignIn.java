@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.text.method.PasswordTransformationMethod;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -24,6 +25,8 @@ public class FragmentSignIn extends Fragment {
     @ViewById(R.id.et_password)
     MediumEditText et_password;
 
+    @ViewById(R.id.et_phone_number)
+    MediumEditText et_phone_number;
 
     @ViewById(R.id.show_pass_btn)
     ImageView show_pass_btn;
@@ -44,8 +47,9 @@ public class FragmentSignIn extends Fragment {
 
     @Click(R.id.btn_singin)
     public void btnSignIn() {
-        Intent intent = new Intent(getActivity(), MainActivity_.class);
-        startActivity(intent);
+        Validations();
+        /*Intent intent = new Intent(getActivity(), MainActivity_.class);
+        startActivity(intent);*/
     }
 
 
@@ -65,6 +69,27 @@ public class FragmentSignIn extends Fragment {
             isShowPassword  = true;
         }
 
+    }
+
+    public void Validations()
+    {
+        if (et_phone_number.getText().length()>0 && et_password.getText().length()>0)
+        {
+            if (et_phone_number.getText().toString().replaceAll("-","").length()!=10)
+            {
+                Toast.makeText(getActivity(), "Phone Number must be of 10 Digit", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Intent intent = new Intent(getActivity(), MainActivity_.class);
+                startActivity(intent);
+            }
+
+        }
+        else
+        {
+            Toast.makeText(getActivity(), "Please Fill-Up All Fields", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

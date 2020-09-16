@@ -3,6 +3,7 @@ package com.digi.pay.fragments;
 import android.annotation.SuppressLint;
 import android.text.method.PasswordTransformationMethod;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -23,6 +24,11 @@ public class FragmentCreateAccount extends Fragment {
     @ViewById(R.id.et_password)
     MediumEditText et_password;
 
+    @ViewById(R.id.et_name)
+    MediumEditText et_name;
+
+    @ViewById(R.id.et_number)
+    MediumEditText et_number;
 
     @ViewById(R.id.show_pass_btn)
     ImageView show_pass_btn;
@@ -49,8 +55,9 @@ public class FragmentCreateAccount extends Fragment {
 
     @Click(R.id.btn_sendOtp)
     public void setSendOtp() {
-        Utility.showFragment(getActivity(), new FragmentAadharCard_()
-                , R.id.main_frame, null, FragmentAadharCard.class.getSimpleName());
+       /* Utility.showFragment(getActivity(), new FragmentAadharCard_()
+                , R.id.main_frame, null, FragmentAadharCard.class.getSimpleName());*/
+       Validations();
     }
 
 
@@ -90,6 +97,30 @@ public class FragmentCreateAccount extends Fragment {
 
     }
 
+    public void Validations()
+    {
+        if (et_name.getText().length()>0 && et_number.getText().length()>0 && et_password.getText().length()>0 && et_re_password.getText().length()>0)
+        {
+            if (et_number.getText().toString().replaceAll("-","").length()!=10)
+            {
+                Toast.makeText(getActivity(), "Phone Number must be of 10 Digit", Toast.LENGTH_SHORT).show();
+            }
+            else if (!et_password.getText().toString().equalsIgnoreCase(et_re_password.getText().toString()))
+            {
+                Toast.makeText(getActivity(), "Password Should Match", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Utility.showFragment(getActivity(), new FragmentAadharCard_()
+                        , R.id.main_frame, null, FragmentAadharCard.class.getSimpleName());
+            }
+
+        }
+        else
+        {
+            Toast.makeText(getActivity(), "Please Fill-Up All Fields", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 
 }
