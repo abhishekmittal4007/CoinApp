@@ -43,17 +43,15 @@ public class Fragment_Verification extends Fragment {
         }
 
         Handler handler2 = new Handler();
-        handler2.postDelayed(new Runnable() {
-            public void run() {
-                codeLetter1.setText("1");
-                codeLetter2.setText("2");
-                codeLetter3.setText("3");
-                codeLetter4.setText("4");
-                codeLetter5.setText("5");
-                codeLetter6.setText("6");
+        handler2.postDelayed(() -> {
+            codeLetter1.setText("1");
+            codeLetter2.setText("2");
+            codeLetter3.setText("3");
+            codeLetter4.setText("4");
+            codeLetter5.setText("5");
+            codeLetter6.setText("6");
 
-            }
-        }, 2000); // 3000 milliseconds delay
+        }, 800); // 3000 milliseconds delay
 
     }
 

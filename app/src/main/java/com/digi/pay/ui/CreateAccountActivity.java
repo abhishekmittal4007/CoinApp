@@ -27,4 +27,9 @@ public class CreateAccountActivity extends AppCompatActivity {
         Utility.showFragment(this, new FragmentCreateAccount_()
                 , R.id.main_frame, null, FragmentCreateAccount.class.getSimpleName());
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }

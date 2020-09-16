@@ -966,8 +966,6 @@ public class StepperIndicator extends View implements ViewPager.OnPageChangeList
         lineAnimator = null;
         indicatorAnimator = null;
 
-        // TODO: 05/08/16 handle cases where steps are skipped - need to animate all of them
-
         if (currentStep == previousStep + 1) {
             // Going to next step
             animatorSet = new AnimatorSet();

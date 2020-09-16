@@ -61,12 +61,8 @@ public class FragmentSignIn extends Fragment {
         else
         {
             et_password.setTransformationMethod(null);
-            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye)); // need to replace with cut eye
+            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_cut_eye));
             isShowPassword  = true;
         }
-
     }
-
-
-
 }

@@ -53,43 +53,29 @@ public class FragmentCreateAccount extends Fragment {
                 , R.id.main_frame, null, FragmentAadharCard.class.getSimpleName());
     }
 
-
     @Click(R.id.show_pass_btn)
-    public void ShowHidePass()
-    {
-        if (isShowPassword)
-        {
-         et_password.setTransformationMethod(new PasswordTransformationMethod());
-         show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye));
-         isShowPassword  = false;
-        }
-        else
-        {
+    public void ShowHidePass() {
+        if (isShowPassword) {
+            et_password.setTransformationMethod(new PasswordTransformationMethod());
+            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye));
+            isShowPassword = false;
+        } else {
             et_password.setTransformationMethod(null);
-            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye)); // need to replace with cut eye
-            isShowPassword  = true;
+            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_cut_eye));
+            isShowPassword = true;
         }
-
     }
 
     @Click(R.id.show_repass_btn)
-    public void ShowHideRePass()
-    {
-        if (isShowRePassword)
-        {
+    public void ShowHideRePass() {
+        if (isShowRePassword) {
             et_re_password.setTransformationMethod(new PasswordTransformationMethod());
             showRePassButtoon.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye));
-            isShowRePassword  = false;
-        }
-        else
-        {
+            isShowRePassword = false;
+        } else {
             et_re_password.setTransformationMethod(null);
-            showRePassButtoon.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye)); // need to replace with cut eye
-            isShowRePassword  = true;
+            showRePassButtoon.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_cut_eye));
+            isShowRePassword = true;
         }
-
     }
-
-
-
 }
