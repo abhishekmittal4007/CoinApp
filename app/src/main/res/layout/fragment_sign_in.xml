@@ -32,8 +32,9 @@
             android:drawablePadding="@dimen/_15sdp"
             android:elevation="@dimen/_3sdp"
             android:hint="Phone number"
+            android:maxLength="10"
             android:importantForAutofill="no"
-            android:inputType="number"
+            android:inputType="phone"
             android:paddingStart="@dimen/_5sdp"
             android:textColorHint="@color/black"
             tools:ignore="HardcodedText,LabelFor,RtlSymmetry,TextFields" />

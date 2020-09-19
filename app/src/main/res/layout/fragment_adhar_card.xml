@@ -49,20 +49,20 @@
             android:elevation="@dimen/_3sdp"
             android:hint="Aadhar-card Number"
             android:importantForAutofill="no"
-            android:inputType="text"
-            android:maxLength="15"
+            android:inputType="number"
+            android:maxLength="12"
             android:paddingStart="@dimen/_5sdp"
             android:textColor="@color/dark_blue"
             android:textColorHint="@color/black"
             tools:ignore="HardcodedText,LabelFor,RtlSymmetry,TextFields" />
 
         <RelativeLayout
+            android:id="@+id/upload_aadhar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_100sdp"
             android:layout_marginTop="@dimen/_10sdp"
             android:background="@drawable/edit_text_bkgd"
-            android:elevation="@dimen/_3sdp"
-            android:id="@+id/upload_aadhar">
+            android:elevation="@dimen/_3sdp">
 
             <com.digi.pay.custom.textviews.SemiBoldTextView
                 android:id="@+id/et_password"

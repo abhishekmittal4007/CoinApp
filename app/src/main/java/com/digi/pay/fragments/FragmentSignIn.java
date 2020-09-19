@@ -52,48 +52,30 @@ public class FragmentSignIn extends Fragment {
         startActivity(intent);*/
     }
 
-
     @Click(R.id.show_pass_btn)
-    public void ShowHidePass()
-    {
-        if (isShowPassword)
-        {
+    public void ShowHidePass() {
+        if (isShowPassword) {
             et_password.setTransformationMethod(new PasswordTransformationMethod());
             show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye));
-            isShowPassword  = false;
-        }
-        else
-        {
+            isShowPassword = false;
+        } else {
             et_password.setTransformationMethod(null);
-            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_eye)); // need to replace with cut eye
-            isShowPassword  = true;
+            show_pass_btn.setImageDrawable(getActivity().getResources().getDrawable(R.drawable.ic_cut_eye));
+            isShowPassword = true;
         }
 
     }
 
-
-    public void Validations()
-    {
-        if (et_phone_number.getText().length()>0 && et_password.getText().length()>0)
-        {
-            if (et_phone_number.getText().toString().replaceAll("-","").length()!=10)
-            {
+    public void Validations() {
+        if (et_phone_number.getText().length() > 0 && et_password.getText().length() > 0) {
+            if (et_phone_number.getText().toString().replaceAll("-", "").length() != 10) {
                 Toast.makeText(getActivity(), "Phone Number must be of 10 Digit", Toast.LENGTH_SHORT).show();
-            }
-            else
-            {
+            } else {
                 Intent intent = new Intent(getActivity(), MainActivity_.class);
                 startActivity(intent);
             }
-
-        }
-        else
-        {
+        } else {
             Toast.makeText(getActivity(), "Please Fill-Up All Fields", Toast.LENGTH_SHORT).show();
         }
     }
-
-
-
-
 }
