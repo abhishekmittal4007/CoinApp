@@ -16,28 +16,18 @@
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/success_animation"
-            tools:ignore="MissingConstraints"
-            />
-
+            tools:ignore="MissingConstraints" />
 
         <com.digi.pay.custom.textviews.BoldTextView
+            android:id="@+id/payment_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_60sdp"
             android:text="@string/payment_successful"
             android:textColor="@color/dark_blue"
             android:textSize="@dimen/_24sdp"
-            tools:ignore="MissingConstraints"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/_60sdp"
-            android:id="@+id/payment_status"
-            />
-
+            tools:ignore="MissingConstraints" />
     </RelativeLayout>
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

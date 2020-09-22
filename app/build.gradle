@@ -71,6 +71,7 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.hanks:htextview-base:0.1.6'
     implementation 'com.hanks:htextview-typer:0.1.6'
+    implementation "com.hanks:htextview-fade:0.1.6"
 
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.3.0'

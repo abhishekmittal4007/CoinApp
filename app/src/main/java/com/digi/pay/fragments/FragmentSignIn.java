@@ -73,6 +73,7 @@ public class FragmentSignIn extends Fragment {
             } else {
                 Intent intent = new Intent(getActivity(), MainActivity_.class);
                 startActivity(intent);
+                requireActivity().finish();
             }
         } else {
             Toast.makeText(getActivity(), "Please Fill-Up All Fields", Toast.LENGTH_SHORT).show();
