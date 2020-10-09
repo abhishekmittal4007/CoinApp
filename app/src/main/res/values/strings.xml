@@ -5,7 +5,7 @@
     <string name="title_qr">QR</string>
     <string name="title_notifications">Notifications</string>
     <string name="hello">Hello,</string>
-    <string name="dharmendra"><u>Dharmendra</u></string>
+    <string name="mohit"><u>Mohit Bhargava</u></string>
     <string name="payment">Payment</string>
     <string name="cn_10_000">Cn 10,000</string>
     <string name="send">Send</string>
@@ -24,7 +24,7 @@
     <string name="confirm_and_send">Confirm and Send</string>
     <string name="enter_coins">Enter Coins</string>
     <string name="scan_my_code_to_pay">Scan my code to pay</string>
-    <string name="open_code_scanner">Open Code Scanner</string>
+    <string name="link_bank_acc">Link Bank Account</string>
     <string name="payment_successful">Payment Successful</string>
     <string name="hello_there">Hello There</string>
     <string name="label_hide">HIDE</string>

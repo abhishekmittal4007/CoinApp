@@ -43,7 +43,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/hello"
-                    android:text="@string/dharmendra"
+                    android:text="@string/mohit"
                     android:textColor="#fff"
                     android:textSize="@dimen/_16sdp"
                     android:textStyle="bold" />
@@ -106,7 +106,7 @@
                 <!--                        android:layout_height="@dimen/_70sdp"-->
                 <!--                        android:layout_centerHorizontal="true"-->
                 <!--                        android:padding="@dimen/_5sdp"-->
-                <!--                        app:srcCompat="@drawable/ic_send_money"-->
+                <!--                        app:srcCompat="@drawable/ic_send_money_white"-->
                 <!--                        tools:ignore="ContentDescription" />-->
 
                 <!--                    <com.digi.pay.custom.textviews.BoldTextView-->
@@ -136,7 +136,7 @@
                 <!--                        android:layout_height="@dimen/_70sdp"-->
                 <!--                        android:layout_centerHorizontal="true"-->
                 <!--                        android:padding="@dimen/_7sdp"-->
-                <!--                        app:srcCompat="@drawable/ic_wallet"-->
+                <!--                        app:srcCompat="@drawable/ic_wallet_white"-->
                 <!--                        tools:ignore="ContentDescription" />-->
 
                 <!--                    <com.digi.pay.custom.textviews.BoldTextView-->
@@ -151,44 +151,51 @@
                 <!--                        android:textStyle="bold" />-->
                 <!--                </RelativeLayout>-->
 
-                <com.digi.pay.custom.buttons.FButton
+                <com.digi.pay.custom.buttons.FancyButton
                     android:id="@+id/send_btn"
                     android:layout_width="@dimen/_120sdp"
-                    android:layout_height="@dimen/_110sdp"
+                    android:layout_height="@dimen/_105sdp"
                     android:layout_below="@+id/button_center"
                     android:layout_alignParentStart="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="@dimen/_5sdp"
-                    android:drawableTop="@drawable/ic_send_money"
-                    android:gravity="center"
-                    android:text="@string/send"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_18sdp"
-                    android:textStyle="bold"
-                    app:buttonColor="#DF8111"
-                    app:cornerRadius="@dimen/_25sdp"
-                    app:shadowEnabled="true" />
+                    app:fb_borderColor="@color/white"
+                    app:fb_borderWidth="@dimen/_3sdp"
+                    app:fb_defaultColor="@android:color/transparent"
+                    app:fb_focusColor="@color/white"
+                    app:fb_ghost="true"
+                    app:fb_iconPaddingBottom="@dimen/_12sdp"
+                    app:fb_iconPosition="top"
+                    app:fb_iconResource="@drawable/send_icon_selector"
+                    app:fb_radius="@dimen/_25sdp"
+                    app:fb_text="Send"
+                    app:fb_textColor="@color/white"
+                    app:fb_textGravity="center"
+                    app:fb_textSize="@dimen/_18sdp"
+                    app:fb_useSystemFont="false" />
 
-                <com.digi.pay.custom.buttons.FButton
+                <com.digi.pay.custom.buttons.FancyButton
                     android:id="@+id/recieve_btn"
                     android:layout_width="@dimen/_120sdp"
-                    android:layout_height="@dimen/_110sdp"
+                    android:layout_height="@dimen/_105sdp"
                     android:layout_below="@+id/button_center"
                     android:layout_alignParentEnd="true"
                     android:layout_centerHorizontal="true"
-                    android:background="@drawable/rounded_button_green"
-                    android:drawableTop="@drawable/ic_wallet"
-                    android:drawablePadding="@dimen/_8sdp"
-                    android:gravity="center"
-                    android:text="@string/receive"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_18sdp"
-                    android:textStyle="bold"
-                    app:buttonColor="#A8E25E"
-                    app:cornerRadius="@dimen/_25sdp"
-                    app:shadowEnabled="true" />
+                    app:fb_borderColor="@color/white"
+                    app:fb_borderWidth="@dimen/_3sdp"
+                    app:fb_defaultColor="@android:color/transparent"
+                    app:fb_focusColor="@color/white"
+                    app:fb_ghost="true"
+                    app:fb_iconPaddingBottom="@dimen/_12sdp"
+                    app:fb_iconPosition="top"
+                    app:fb_iconResource="@drawable/wallet_icon_selector"
+                    app:fb_radius="@dimen/_25sdp"
+                    app:fb_text="Receive"
+                    app:fb_textColor="@color/white"
+                    app:fb_textGravity="center"
+                    app:fb_textSize="@dimen/_18sdp"
+                    app:fb_useSystemFont="false" />
             </RelativeLayout>
         </RelativeLayout>
 

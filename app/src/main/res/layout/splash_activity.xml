@@ -8,6 +8,12 @@
     android:orientation="vertical"
     tools:context=".ui.MainActivity">
 
+    <ImageView
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@mipmap/ic_launcher"
+        tools:ignore="ContentDescription" />
+
     <com.hanks.htextview.typer.TyperTextView
         android:id="@+id/txt_digi_"
         android:layout_width="wrap_content"

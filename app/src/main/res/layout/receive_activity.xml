@@ -50,40 +50,59 @@
                     android:scaleType="fitXY"
                     android:src="@drawable/ic_recieve_qr" />
 
-                <TextView
+                <com.digi.pay.custom.textviews.RegularTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
                     android:layout_marginRight="30dp"
                     android:text="Account no. 2938120947"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
-
                 <com.digi.pay.custom.textviews.ExtraBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/_35sdp"
-                    android:text="@string/dharmendra"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/mohit"
                     android:textColor="@color/dark_blue"
                     android:textSize="40sp"
                     android:textStyle="bold" />
 
-                <TextView
+                <com.digi.pay.custom.textviews.SemiBoldTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginRight="30dp"
-                    android:text="@string/scan_my_code_to_pay"
+                    android:text="Total Sent:                                      Cn 5000"
                     android:textAlignment="center"
                     android:textSize="16sp" />
 
+                <com.digi.pay.custom.textviews.SemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="30dp"
+                    android:text="Total Received:                             Cn 1000"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
 
+                <com.digi.pay.custom.textviews.SemiBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="30dp"
+                    android:text="Account Created On:              8th Oct, 20"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <TextView
@@ -94,23 +113,17 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:background="@drawable/rounded_button_white"
-                android:drawableLeft="@drawable/ic_qr_open_icon"
+                android:drawableLeft="@drawable/ic_bank"
                 android:drawablePadding="@dimen/_15sdp"
                 android:paddingLeft="20dp"
                 android:paddingTop="12dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="12dp"
-                android:text="@string/open_code_scanner"
+                android:text="@string/link_bank_acc"
                 android:textAlignment="center"
                 android:textColor="@color/dark_blue"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-
-
         </RelativeLayout>
-
-
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

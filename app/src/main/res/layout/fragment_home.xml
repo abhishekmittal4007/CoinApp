@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/hello"
-                    android:text="@string/dharmendra"
+                    android:text="@string/mohit"
                     android:textColor="#fff"
                     android:textSize="@dimen/_16sdp"
                     android:textStyle="bold" />

@@ -45,7 +45,7 @@ public class ReceiveActivity extends AppCompatActivity {
         //intializing scan object
         qrScan = new IntentIntegrator(ReceiveActivity.this);
         try {
-            Bitmap bitmap = encodeAsBitmap("{\"name\":\"Dharmendra\", \"account_number\":\"2938120947\"}");
+            Bitmap bitmap = encodeAsBitmap("{\"name\":\"Mohit Bhargava\", \"account_number\":\"2938120947\"}");
             user_qr.setImageBitmap(bitmap);
         } catch (WriterException e) {
             e.printStackTrace();
@@ -60,8 +60,8 @@ public class ReceiveActivity extends AppCompatActivity {
     @Click(R.id.scanner_btn)
     public void ScanQr() {
         //initiating the qr code scan
-        qrScan.initiateScan();
-        qrScan.setOrientationLocked(true);
+//        qrScan.initiateScan();
+//        qrScan.setOrientationLocked(true);
     }
 
     @Override

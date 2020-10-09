@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
         startActivity(i);
     }
 
-    @Click(R.id.recieve_btn)
+    @Click({R.id.recieve_btn, R.id.header_view})
     public void recieveButtonClicked() {
         Intent i = new Intent(getActivity(), ReceiveActivity_.class);
         startActivity(i);
