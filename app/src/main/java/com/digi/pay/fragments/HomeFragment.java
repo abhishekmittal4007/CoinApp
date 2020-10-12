@@ -8,8 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.digi.pay.R;
 import com.digi.pay.adapters.TransactionAdapter;
+import com.digi.pay.custom.textviews.RegularTextView;
+import com.digi.pay.custom.textviews.SemiBoldTextView;
 import com.digi.pay.ui.ReceiveActivity_;
 import com.digi.pay.ui.SendActivity_;
+import com.digi.pay.ui.SignInActivity_;
+import com.digi.pay.utils.PreferenceManger;
 import com.digi.pay.view_models.TransactionData;
 
 import org.androidannotations.annotations.AfterViews;
@@ -24,6 +28,12 @@ public class HomeFragment extends Fragment {
 
     @ViewById(R.id.transaction_list)
     RecyclerView recyclerView;
+
+    @ViewById(R.id.username)
+    SemiBoldTextView username;
+
+    @ViewById(R.id.logout)
+    RegularTextView logout;
 
     ArrayList<TransactionData> myListData;
 
@@ -46,6 +56,14 @@ public class HomeFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
+
+
+        if (PreferenceManger.getObject("signup_data")!=null)
+        {
+            username.setText(PreferenceManger.getObject("signup_data").getFullname());
+        }
+
+
     }
 
     @Click(R.id.send_btn)
@@ -59,4 +77,14 @@ public class HomeFragment extends Fragment {
         Intent i = new Intent(getActivity(), ReceiveActivity_.class);
         startActivity(i);
     }
+
+    @Click(R.id.logout)
+    public void logoutButtonClicked() {
+        PreferenceManger.logoutUser();
+        Intent i = new Intent(getActivity(), SignInActivity_.class);
+        startActivity(i);
+        getActivity().finish();
+    }
+
+
 }

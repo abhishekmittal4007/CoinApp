@@ -12,6 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.digi.pay.R;
+import com.digi.pay.custom.textviews.ExtraBoldTextView;
+import com.digi.pay.utils.PreferenceManger;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -38,14 +40,41 @@ public class ReceiveActivity extends AppCompatActivity {
     @ViewById(R.id.user_qr)
     ImageView user_qr;
 
+    @ViewById(R.id.username)
+    ExtraBoldTextView username;
+
     IntentIntegrator qrScan;
+
+    String User_name;
+
+    boolean isDataAvailable = false;
 
     @AfterViews
     public void init() {
         //intializing scan object
+
+        if (PreferenceManger.getObject("signup_data")!=null)
+        {
+            isDataAvailable = true;
+            User_name = PreferenceManger.getObject("signup_data").getFullname();
+            username.setText(PreferenceManger.getObject("signup_data").getFullname());
+        }
+        else
+        {
+            isDataAvailable = false;
+        }
+
         qrScan = new IntentIntegrator(ReceiveActivity.this);
         try {
-            Bitmap bitmap = encodeAsBitmap("{\"name\":\"Mohit Bhargava\", \"account_number\":\"2938120947\"}");
+            Bitmap bitmap;
+            if (isDataAvailable)
+            {
+                 bitmap = encodeAsBitmap("{\"name\":\"Mohit Bhargava\", \"account_number\":\"2938120947\"}");
+            }
+            else
+            {
+                 bitmap = encodeAsBitmap("{\"name\":\"Mohit Bhargava\", \"account_number\":\"2938120947\"}");
+            }
             user_qr.setImageBitmap(bitmap);
         } catch (WriterException e) {
             e.printStackTrace();

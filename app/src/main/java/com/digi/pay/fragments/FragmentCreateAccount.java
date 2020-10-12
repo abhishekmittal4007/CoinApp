@@ -10,7 +10,9 @@ import androidx.fragment.app.Fragment;
 import com.digi.pay.R;
 import com.digi.pay.custom.edittexts.MediumEditText;
 import com.digi.pay.ui.CreateAccountActivity;
+import com.digi.pay.utils.PreferenceManger;
 import com.digi.pay.utils.Utility;
+import com.digi.pay.view_models.SignUpPojo;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Click;
@@ -111,6 +113,14 @@ public class FragmentCreateAccount extends Fragment {
             }
             else
             {
+                /** Code added by arul to save login detail to prefrences */
+                SignUpPojo signUpPojo = new SignUpPojo();
+
+                signUpPojo.setFullname(et_name.getText().toString());
+                signUpPojo.setPhoneNumber(et_number.getText().toString());
+                signUpPojo.setPassword(et_password.getText().toString());
+                PreferenceManger.putObject("signup_data",signUpPojo);
+
                 Utility.showFragment(getActivity(), new FragmentAadharCard_()
                         , R.id.main_frame, null, FragmentAadharCard.class.getSimpleName());
             }

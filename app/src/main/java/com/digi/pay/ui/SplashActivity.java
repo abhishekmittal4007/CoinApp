@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.digi.pay.R;
+import com.digi.pay.utils.PreferenceManger;
+import com.digi.pay.view_models.SignUpPojo;
 import com.hanks.htextview.fade.FadeTextView;
 import com.hanks.htextview.typer.TyperTextView;
 
@@ -38,9 +40,22 @@ public class SplashActivity extends AppCompatActivity {
             txt_digi_sub.animateText("Digital India | Digital Cash");
         });
         txt_digi_sub.setAnimationListener(hTextView -> {
-            Intent intent = new Intent(this, SignInActivity_.class);
-            startActivity(intent);
-            finish();
+
+            SignUpPojo signUpPojo = PreferenceManger.getObject("signup_data");
+
+            if (signUpPojo!=null)
+            {
+                Intent intent = new Intent(this, MainActivity_.class);
+                startActivity(intent);
+                finish();
+            }
+            else
+            {
+                Intent intent = new Intent(this, SignInActivity_.class);
+                startActivity(intent);
+                finish();
+            }
+
         });
         txt_dig.animateText("DigiPay");
     }

@@ -18,15 +18,29 @@
             android:background="@drawable/shadowcurve"
             android:paddingBottom="@dimen/_10sdp">
 
+            <com.digi.pay.custom.textviews.RegularTextView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout"
+                android:textColor="#fff"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                />
+
+
             <RelativeLayout
                 android:id="@+id/header_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_15sdp"
                 android:background="@drawable/send_btn_bkgd"
                 android:gravity="center_vertical"
+                android:layout_below="@+id/logout"
                 android:padding="@dimen/_10sdp">
 
                 <com.digi.pay.custom.textviews.RegularTextView
