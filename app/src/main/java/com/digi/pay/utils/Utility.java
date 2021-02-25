@@ -116,6 +116,8 @@ public class Utility {
     public static final int NETWORK_STATUS_WIFI = 1;
     public static final int NETWORK_STATUS_MOBILE = 2;
 
+    public static boolean isUserAlreadyLogin = false;
+
     public static final Pattern otp_pattern = Pattern.compile("(|^)\\d{4}");
     private static List<Integer> colors;
 

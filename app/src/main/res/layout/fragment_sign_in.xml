@@ -15,6 +15,7 @@
         android:text="Sign Up"
         android:textColor="@color/dark_blue"
         android:textSize="@dimen/_24sdp"
+        android:id="@+id/header"
         tools:ignore="MissingConstraints" />
 
     <RelativeLayout

@@ -11,6 +11,7 @@ import androidx.core.content.res.ResourcesCompat;
 
 import com.digi.pay.R;
 import com.digi.pay.utils.PreferenceManger;
+import com.digi.pay.utils.Utility;
 import com.digi.pay.view_models.SignUpPojo;
 import com.hanks.htextview.fade.FadeTextView;
 import com.hanks.htextview.typer.TyperTextView;
@@ -45,9 +46,13 @@ public class SplashActivity extends AppCompatActivity {
 
             if (signUpPojo!=null)
             {
-                Intent intent = new Intent(this, MainActivity_.class);
+                Utility.isUserAlreadyLogin = true;
+                Intent intent = new Intent(this, SignInActivity_.class);
                 startActivity(intent);
                 finish();
+               /* Intent intent = new Intent(this, MainActivity_.class);
+                startActivity(intent);
+                finish();*/
             }
             else
             {

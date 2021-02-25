@@ -63,6 +63,7 @@ public class Fragment_Verification extends Fragment {
     @Click(R.id.btn_verify)
     public void setVerify() {
         Intent intent = new Intent(requireActivity(), MainActivity_.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }
